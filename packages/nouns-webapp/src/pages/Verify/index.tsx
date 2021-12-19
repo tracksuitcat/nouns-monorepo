@@ -9,7 +9,7 @@ import Section from '../../layout/Section';
 import { Button, Col, Form } from 'react-bootstrap';
 import VerifySignature from '../../components/VerifySignature';
 import * as R from 'ramda';
-import { useEthers } from 'tracksuitcat-usedapp';
+import { useEthers } from '@usedapp/core';
 
 interface VerifyPageProp {}
 

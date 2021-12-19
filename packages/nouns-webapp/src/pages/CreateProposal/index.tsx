@@ -11,7 +11,7 @@ import {
 import { useUserVotes } from '../../wrappers/nounToken';
 import classes from './CreateProposal.module.css';
 import { Link } from 'react-router-dom';
-import { useEthers } from 'tracksuitcat-usedapp';
+import { useEthers } from '@usedapp/core';
 import { AlertModal, setAlertModal } from '../../state/slices/application';
 import ProposalEditor from '../../components/ProposalEditor';
 import CreateProposalButton from '../../components/CreateProposalButton';

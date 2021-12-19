@@ -1,5 +1,5 @@
 import { Auction, AuctionHouseContractFunction } from '../../wrappers/nounsAuction';
-import { connectContractToSigner, useEthers, useContractFunction } from 'tracksuitcat-usedapp';
+import { connectContractToSigner, useEthers, useContractFunction } from '@usedapp/core';
 import { useAppSelector } from '../../hooks';
 import React, { useEffect, useState, useRef, ChangeEvent, useCallback } from 'react';
 import { utils, BigNumber as EthersBN } from 'ethers';

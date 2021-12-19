@@ -2,7 +2,7 @@ import {
   ContractAddresses as NounsContractAddresses,
   getContractAddressesForChainOrThrow,
 } from '@nouns/sdk';
-import { ChainId } from 'tracksuitcat-usedapp';
+import { ChainId } from '@usedapp/core';
 
 interface ExternalContractAddresses {
   lidoToken: string | undefined;

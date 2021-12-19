@@ -1,5 +1,5 @@
 import { useReverseENSLookUp } from '../../utils/ensLookup';
-import { useEthers } from 'tracksuitcat-usedapp';
+import { useEthers } from '@usedapp/core';
 import Davatar from '@davatar/react';
 import classes from './ShortAddress.module.css';
 

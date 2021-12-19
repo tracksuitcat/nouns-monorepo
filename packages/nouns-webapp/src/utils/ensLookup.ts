@@ -1,4 +1,4 @@
-import { useEthers } from 'tracksuitcat-usedapp';
+import { useEthers } from '@usedapp/core';
 import { useEffect, useState } from 'react';
 
 export const useReverseENSLookUp = (address: string) => {

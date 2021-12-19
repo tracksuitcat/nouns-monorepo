@@ -1,4 +1,4 @@
-import { ChainId } from 'tracksuitcat-usedapp';
+import { ChainId } from '@usedapp/core';
 import { CHAIN_ID, ETHERSCAN_API_KEY } from '../config';
 
 const getBaseURL = (network: ChainId) => {

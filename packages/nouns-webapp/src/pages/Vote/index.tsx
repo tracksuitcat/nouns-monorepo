@@ -12,7 +12,7 @@ import {
 import { useUserVotesAsOfBlock } from '../../wrappers/nounToken';
 import classes from './Vote.module.css';
 import { Link, RouteComponentProps } from 'react-router-dom';
-import { TransactionStatus, useBlockNumber } from 'tracksuitcat-usedapp';
+import { TransactionStatus, useBlockNumber } from '@usedapp/core';
 import { buildEtherscanAddressLink, buildEtherscanTxLink } from '../../utils/etherscan';
 import { AlertModal, setAlertModal } from '../../state/slices/application';
 import ProposalStatus from '../../components/ProposalStatus';
