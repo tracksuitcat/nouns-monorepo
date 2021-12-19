@@ -1,4 +1,4 @@
-import { useEthers } from '@usedapp/core';
+import { useEthers } from 'tracksuitcat-usedapp';
 import { useEffect, useState } from 'react';
 
 export const useEnsAvatarLookup = (address: string) => {

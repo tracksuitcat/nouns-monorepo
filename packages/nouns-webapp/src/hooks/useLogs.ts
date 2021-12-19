@@ -1,4 +1,4 @@
-import { useBlockNumber } from '@usedapp/core';
+import { useBlockNumber } from 'tracksuitcat-usedapp';
 import { useEffect, useMemo } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { addListener, removeListener } from '../state/slices/logs';
