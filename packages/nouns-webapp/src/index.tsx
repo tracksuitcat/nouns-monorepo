@@ -86,6 +86,7 @@ const useDappConfig = {
     [ChainId.Mainnet]: createNetworkHttpUrl('mainnet'),
     [ChainId.Hardhat]: 'http://localhost:8545',
     [ChainId.Avalanche]: 'https://api.avax.network/ext/bc/C/rpc',
+    [ChainId.Fuji]: 'https://api.avax-test.network/ext/bc/C/rpc',
   },
 };
 
