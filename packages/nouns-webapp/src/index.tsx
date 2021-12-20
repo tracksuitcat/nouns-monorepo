@@ -85,6 +85,7 @@ const useDappConfig = {
     [ChainId.Rinkeby]: createNetworkHttpUrl('rinkeby'),
     [ChainId.Mainnet]: createNetworkHttpUrl('mainnet'),
     [ChainId.Hardhat]: 'http://localhost:8545',
+    [ChainId.Avalanche]: 'https://api.avax.network/ext/bc/C/rpc',
   },
 };
 
