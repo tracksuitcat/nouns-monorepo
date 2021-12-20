@@ -17,7 +17,7 @@ interface AppConfig {
   enableHistory: boolean;
 }
 
-type SupportedChains = ChainId.Avalanche | ChainId.Fuji;
+type SupportedChains = ChainId.Fuji | ChainId.Avalanche | ChainId.Hardhat;
 
 export const CHAIN_ID: SupportedChains = parseInt(process.env.REACT_APP_CHAIN_ID ?? '4');
 
@@ -36,21 +36,9 @@ export const createNetworkWsUrl = (network: string): string => {
 };
 
 const app: Record<SupportedChains, AppConfig> = {
-  [ChainId.Rinkeby]: {
-    jsonRpcUri: createNetworkHttpUrl('rinkeby'),
-    wsRpcUri: createNetworkWsUrl('rinkeby'),
-    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/nounsdao/nouns-subgraph-rinkeby-v4',
-    enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
-  },
-  [ChainId.Mainnet]: {
-    jsonRpcUri: createNetworkHttpUrl('mainnet'),
-    wsRpcUri: createNetworkWsUrl('mainnet'),
-    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/nounsdao/nouns-subgraph',
-    enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
-  },
-  [ChainId.Hardhat]: {
-    jsonRpcUri: 'http://localhost:8545',
-    wsRpcUri: 'ws://localhost:8545',
+  [ChainId.Fuji]: {
+    jsonRpcUri: 'https://api.avax-test.network/ext/bc/C/rpc',
+    wsRpcUri: 'wss://api.avax-test.network/ext/bc/C/rpc',
     subgraphApiUri: '',
     enableHistory: false,
   },
@@ -60,28 +48,22 @@ const app: Record<SupportedChains, AppConfig> = {
     subgraphApiUri: '',
     enableHistory: false,
   },
-  [ChainId.Fuji]: {
-    jsonRpcUri: 'https://api.avax-test.network/ext/bc/C/rpc',
-    wsRpcUri: 'wss://api.avax-test.network/ext/bc/C/rpc',
+  [ChainId.Hardhat]: {
+    jsonRpcUri: 'http://localhost:8545',
+    wsRpcUri: 'ws://localhost:8545',
     subgraphApiUri: '',
     enableHistory: false,
   },
 };
 
 const externalAddresses: Record<SupportedChains, ExternalContractAddresses> = {
-  [ChainId.Rinkeby]: {
-    lidoToken: '0xF4242f9d78DB7218Ad72Ee3aE14469DBDE8731eD',
-  },
-  [ChainId.Mainnet]: {
-    lidoToken: '0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84',
-  },
-  [ChainId.Hardhat]: {
+  [ChainId.Fuji]: {
     lidoToken: undefined,
   },
   [ChainId.Avalanche]: {
     lidoToken: undefined,
   },
-  [ChainId.Fuji]: {
+  [ChainId.Hardhat]: {
     lidoToken: undefined,
   },
 };
