@@ -1,4 +1,4 @@
-import { useBlockNumber, useEthers } from '@usedapp/core';
+import { useBlockNumber, useEthers } from 'tracksuitcat-usedapp';
 import { useEffect, useMemo } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { EventFilter, keyToFilter } from '../../utils/logParsing';

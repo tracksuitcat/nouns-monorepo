@@ -1,5 +1,5 @@
 import { NounsDAOABI, NounsDaoLogicV1Factory } from '@nouns/sdk';
-import { useContractCall, useContractCalls, useContractFunction, useEthers } from '@usedapp/core';
+import { useContractCall, useContractCalls, useContractFunction, useEthers } from 'tracksuitcat-usedapp';
 import { utils, BigNumber as EthersBN } from 'ethers';
 import { defaultAbiCoder } from 'ethers/lib/utils';
 import { useMemo } from 'react';

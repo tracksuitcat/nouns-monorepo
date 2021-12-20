@@ -1,4 +1,4 @@
-import { useContractCall, useEthers } from '@usedapp/core';
+import { useContractCall, useEthers } from 'tracksuitcat-usedapp';
 import { BigNumber as EthersBN, utils } from 'ethers';
 import { NounsTokenABI } from '@nouns/contracts';
 import config from '../config';

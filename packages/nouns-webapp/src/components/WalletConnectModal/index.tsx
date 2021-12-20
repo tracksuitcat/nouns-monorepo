@@ -1,7 +1,7 @@
 import Modal from '../Modal';
 import WalletButton from '../WalletButton';
 import { WALLET_TYPE } from '../WalletButton';
-import { useEthers } from '@usedapp/core';
+import { useEthers } from 'tracksuitcat-usedapp';
 import { InjectedConnector } from '@web3-react/injected-connector';
 import { WalletLinkConnector } from '@web3-react/walletlink-connector';
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector';

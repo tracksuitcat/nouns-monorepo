@@ -1,6 +1,6 @@
-import '@usedapp/core';
+import 'tracksuitcat-usedapp';
 
-declare module '@usedapp/core' {
+declare module 'tracksuitcat-usedapp' {
   function useContractCall<T extends any = any[]>(call: ContractCall | Falsy): T | undefined;
 
   function useContractCalls<T extends any = any>(

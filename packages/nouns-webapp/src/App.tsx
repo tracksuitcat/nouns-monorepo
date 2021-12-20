@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useEthers } from '@usedapp/core';
+import { useEthers } from 'tracksuitcat-usedapp';
 import { useAppDispatch, useAppSelector } from './hooks';
 import { setActiveAccount } from './state/slices/account';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';

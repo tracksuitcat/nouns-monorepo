@@ -3,7 +3,7 @@ import ShortAddress from '../ShortAddress';
 import classes from './NavBar.module.css';
 import logo from '../../assets/logo.svg';
 import { useState } from 'react';
-import { useEtherBalance, useEthers } from '@usedapp/core';
+import { useEtherBalance, useEthers } from 'tracksuitcat-usedapp';
 import WalletConnectModal from '../WalletConnectModal';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
