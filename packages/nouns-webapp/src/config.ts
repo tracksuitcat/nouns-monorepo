@@ -17,7 +17,7 @@ interface AppConfig {
   enableHistory: boolean;
 }
 
-type SupportedChains = ChainId.Rinkeby | ChainId.Mainnet | ChainId.Hardhat;
+type SupportedChains = ChainId.Rinkeby | ChainId.Mainnet | ChainId.Hardhat | ChainId.Avalanche;
 
 export const CHAIN_ID: SupportedChains = parseInt(process.env.REACT_APP_CHAIN_ID ?? '4');
 
@@ -54,6 +54,12 @@ const app: Record<SupportedChains, AppConfig> = {
     subgraphApiUri: '',
     enableHistory: false,
   },
+  [ChainId.Avalanche]: {
+    jsonRpcUri: 'https://api.avax.network/ext/bc/C/rpc',
+    wsRpcUri: 'wss://api.avax.network/ext/bc/C/rpc',
+    subgraphApiUri: '',
+    enableHistory: false,
+  },
 };
 
 const externalAddresses: Record<SupportedChains, ExternalContractAddresses> = {
@@ -66,6 +72,9 @@ const externalAddresses: Record<SupportedChains, ExternalContractAddresses> = {
   [ChainId.Hardhat]: {
     lidoToken: undefined,
   },
+  [ChainId.Avalanche]: {
+    lidoToken: undefined,
+  }
 };
 
 const getAddresses = (): ContractAddresses => {
