@@ -45,7 +45,7 @@
     "redux": "^4.1.0",
     "redux-devtools-extension": "^2.13.9",
     "remark-breaks": "^3.0.1",
-    "tracksuitcat-usedapp": "^0.0.3",
+    "tracksuitcat-usedapp": "^0.0.9",
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
