@@ -48,12 +48,6 @@ const externalAddresses: Record<SupportedChains, ExternalContractAddresses> = {
   [ChainId.Fuji]: {
     lidoToken: undefined,
   },
-  [ChainId.Avalanche]: {
-    lidoToken: undefined,
-  },
-  [ChainId.Hardhat]: {
-    lidoToken: undefined,
-  },
 };
 
 const getAddresses = (): ContractAddresses => {
