@@ -39,7 +39,7 @@ const app: Record<SupportedChains, AppConfig> = {
   [ChainId.Fuji]: {
     jsonRpcUri: 'https://api.avax-test.network/ext/bc/C/rpc',
     wsRpcUri: 'wss://api.avax-test.network/ext/bc/C/rpc',
-    subgraphApiUri: '',
+    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/tracksuitcat/project',
     enableHistory: false,
   },
   [ChainId.Avalanche]: {
