@@ -40,7 +40,7 @@ const app: Record<SupportedChains, AppConfig> = {
     jsonRpcUri: 'https://api.avax-test.network/ext/bc/C/rpc',
     wsRpcUri: 'wss://api.avax-test.network/ext/bc/C/rpc',
     subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/tracksuitcat/project',
-    enableHistory: false,
+    enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
   },
 };
 
