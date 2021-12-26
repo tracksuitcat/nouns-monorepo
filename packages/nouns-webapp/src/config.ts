@@ -38,7 +38,7 @@ export const createNetworkWsUrl = (network: string): string => {
 const app: Record<SupportedChains, AppConfig> = {
   [ChainId.Fuji]: {
     jsonRpcUri: 'https://api.avax-test.network/ext/bc/C/rpc',
-    wsRpcUri: 'wss://api.avax-test.network/ext/bc/C/rpc',
+    wsRpcUri: 'wss://api.avax-test.network/ext/bc/C/ws',
     subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/tracksuitcat/project',
     enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
   },
