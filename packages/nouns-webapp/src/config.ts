@@ -17,7 +17,7 @@ interface AppConfig {
   enableHistory: boolean;
 }
 
-type SupportedChains = ChainId.Fuji | ChainId.Avalanche | ChainId.Hardhat;
+type SupportedChains = ChainId.Fuji;
 
 export const CHAIN_ID: SupportedChains = parseInt(process.env.REACT_APP_CHAIN_ID ?? '4');
 
@@ -40,18 +40,6 @@ const app: Record<SupportedChains, AppConfig> = {
     jsonRpcUri: 'https://api.avax-test.network/ext/bc/C/rpc',
     wsRpcUri: 'wss://api.avax-test.network/ext/bc/C/rpc',
     subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/tracksuitcat/project',
-    enableHistory: false,
-  },
-  [ChainId.Avalanche]: {
-    jsonRpcUri: 'https://api.avax.network/ext/bc/C/rpc',
-    wsRpcUri: 'wss://api.avax.network/ext/bc/C/rpc',
-    subgraphApiUri: '',
-    enableHistory: false,
-  },
-  [ChainId.Hardhat]: {
-    jsonRpcUri: 'http://localhost:8545',
-    wsRpcUri: 'ws://localhost:8545',
-    subgraphApiUri: '',
     enableHistory: false,
   },
 };
