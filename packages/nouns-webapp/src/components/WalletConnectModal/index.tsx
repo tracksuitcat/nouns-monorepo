@@ -11,6 +11,17 @@ import config, { CHAIN_ID } from '../../config';
 import classes from './WalletConnectModal.module.css';
 import { useState } from 'react';
 
+const rpcUrl = 'https://api.avax-test.network/ext/bc/C/rpc';
+const originalFetch = window.fetch;
+window.fetch = (url, opts): Promise<Response> => {
+    if (url === rpcUrl && opts) {
+        opts.headers = opts.headers || {
+            'Content-Type': 'application/json'
+        };
+    }
+    return originalFetch(url, opts);
+}
+
 const WalletConnectModal: React.FC<{ onDismiss: () => void }> = props => {
   const { onDismiss } = props;
   const { activate } = useEthers();

@@ -45,6 +45,17 @@ import { push } from 'connected-react-router';
 
 dotenv.config();
 
+const rpcUrl = 'https://api.avax-test.network/ext/bc/C/rpc';
+const originalFetch = window.fetch;
+window.fetch = (url, opts): Promise<Response> => {
+    if (url === rpcUrl && opts) {
+        opts.headers = opts.headers || {
+            'Content-Type': 'application/json'
+        };
+    }
+    return originalFetch(url, opts);
+}
+
 export const history = createBrowserHistory();
 
 const createRootReducer = (history: History) =>
